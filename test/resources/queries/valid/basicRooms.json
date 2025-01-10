@@ -1,0 +1,43 @@
+{
+	"title": "basic rooms test",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"SixCampus_furniture": "*Tables*"
+					}
+				},
+				{
+					"GT": {
+						"SixCampus_seats": 300
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["SixCampus_shortname", "maxSeats"],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": ["maxSeats"]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["SixCampus_shortname"],
+			"APPLY": [
+				{
+					"maxSeats": {
+						"MAX": "SixCampus_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "SixCampus_shortname": "HEBB", "maxSeats": 375 },
+		{ "SixCampus_shortname": "WOOD", "maxSeats": 120 },
+		{ "SixCampus_shortname": "ESB", "maxSeats": 80 },
+		{ "SixCampus_shortname": "FNH", "maxSeats": 28 }
+	]
+}

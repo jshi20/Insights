@@ -1,0 +1,28 @@
+{
+	"title": "everything works except **",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{ "GT": { "sections_avg": 70 } },
+						{ "IS": { "sections_dept": "**CPSC" } }
+					]
+				},
+				{ "NOT": { "LT": { "sections_year": 2016 } } }
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_id",
+				"sections_avg",
+				"sections_instructor",
+				"sections_year"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

@@ -1,0 +1,28 @@
+{
+	"allSections": [
+		{
+			"id": "31379",
+			"Course": "504",
+			"Title": "rsrch methdlgy",
+			"Professor": "",
+			"Subject": "aanb",
+			"Year": 2015,
+			"Avg": 94.44,
+			"Pass": 9,
+			"Fail": 0,
+			"Audit": 9
+		},
+		{
+			"id": "31380",
+			"Course": "504",
+			"Title": "rsrch methdlgy",
+			"Professor": "",
+			"Subject": "aanb",
+			"Year": 2015,
+			"Avg": 94.44,
+			"Pass": 9,
+			"Fail": 0,
+			"Audit": 9
+		}
+	]
+}

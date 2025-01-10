@@ -1,0 +1,36 @@
+{
+	"title": "wild card",
+	"input": {
+		"WHERE": { "IS": { "rooms_number": "*100*" } },
+		"OPTIONS": { "COLUMNS": ["rooms_shortname", "rooms_number", "roomCount"] },
+		"TRANSFORMATIONS": {
+			"GROUP": ["rooms_shortname", "rooms_number"],
+			"APPLY": [{ "roomCount": { "COUNT": "rooms_fullname" } }]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "rooms_shortname": "FSC", "rooms_number": "1001", "roomCount": 1 },
+		{ "rooms_shortname": "FSC", "rooms_number": "1002", "roomCount": 1 },
+		{ "rooms_shortname": "FSC", "rooms_number": "1003", "roomCount": 1 },
+		{ "rooms_shortname": "FSC", "rooms_number": "1005", "roomCount": 1 },
+		{ "rooms_shortname": "GEOG", "rooms_number": "100", "roomCount": 1 },
+		{ "rooms_shortname": "HEBB", "rooms_number": "100", "roomCount": 1 },
+		{ "rooms_shortname": "LSC", "rooms_number": "1001", "roomCount": 1 },
+		{ "rooms_shortname": "LSC", "rooms_number": "1002", "roomCount": 1 },
+		{ "rooms_shortname": "LSC", "rooms_number": "1003", "roomCount": 1 },
+		{ "rooms_shortname": "MATH", "rooms_number": "100", "roomCount": 1 },
+		{ "rooms_shortname": "MATX", "rooms_number": "1100", "roomCount": 1 },
+		{ "rooms_shortname": "SCRF", "rooms_number": "100", "roomCount": 1 },
+		{ "rooms_shortname": "SCRF", "rooms_number": "1003", "roomCount": 1 },
+		{ "rooms_shortname": "SCRF", "rooms_number": "1004", "roomCount": 1 },
+		{ "rooms_shortname": "SCRF", "rooms_number": "1005", "roomCount": 1 },
+		{ "rooms_shortname": "ORCH", "rooms_number": "1001", "roomCount": 1 },
+		{ "rooms_shortname": "PCOH", "rooms_number": "1001", "roomCount": 1 },
+		{ "rooms_shortname": "PCOH", "rooms_number": "1002", "roomCount": 1 },
+		{ "rooms_shortname": "PCOH", "rooms_number": "1003", "roomCount": 1 },
+		{ "rooms_shortname": "PCOH", "rooms_number": "1008", "roomCount": 1 },
+		{ "rooms_shortname": "PCOH", "rooms_number": "1009", "roomCount": 1 },
+		{ "rooms_shortname": "WESB", "rooms_number": "100", "roomCount": 1 }
+	]
+}

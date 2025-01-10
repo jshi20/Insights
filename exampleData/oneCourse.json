@@ -1,0 +1,52 @@
+{
+	"allSections": [
+		{
+			"uuid": "18518",
+			"id": "515",
+			"title": "fnc hmn ant musc",
+			"instructor": "ford, donna",
+			"dept": "anat",
+			"year": 2009,
+			"avg": 95,
+			"pass": 7,
+			"fail": 0,
+			"audit": 0
+		},
+		{
+			"uuid": "18519",
+			"id": "515",
+			"title": "fnc hmn ant musc",
+			"instructor": "",
+			"dept": "anat",
+			"year": 2009,
+			"avg": 86.67,
+			"pass": 6,
+			"fail": 0,
+			"audit": 0
+		},
+		{
+			"uuid": "90351",
+			"id": "515",
+			"title": "fnc hmn ant musc",
+			"instructor": "krebs, claudia",
+			"dept": "anat",
+			"year": 2015,
+			"avg": 89.6,
+			"pass": 5,
+			"fail": 0,
+			"audit": 0
+		},
+		{
+			"uuid": "90352",
+			"id": "515",
+			"title": "fnc hmn ant musc",
+			"instructor": "",
+			"dept": "anat",
+			"year": 2015,
+			"avg": 89.6,
+			"pass": 5,
+			"fail": -5,
+			"audit": 0
+		}
+	]
+}

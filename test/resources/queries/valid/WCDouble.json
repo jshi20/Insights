@@ -1,0 +1,85 @@
+{
+	"title": "SELECT dept, id, avg WHERE (avg == 420) OR (dept = *on* AND avg > 93)",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"sections_avg": 93
+							}
+						},
+						{
+							"IS": {
+								"sections_dept": "*on*"
+							}
+						}
+					]
+				},
+				{
+					"EQ": {
+						"sections_avg": 420
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_dept", "sections_id", "sections_avg"],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "onco",
+			"sections_id": "502",
+			"sections_avg": 93.07
+		},
+		{
+			"sections_dept": "onco",
+			"sections_id": "502",
+			"sections_avg": 93.07
+		},
+		{
+			"sections_dept": "econ",
+			"sections_id": "560",
+			"sections_avg": 93.33
+		},
+		{
+			"sections_dept": "econ",
+			"sections_id": "560",
+			"sections_avg": 93.33
+		},
+		{
+			"sections_dept": "econ",
+			"sections_id": "580",
+			"sections_avg": 93.47
+		},
+		{
+			"sections_dept": "econ",
+			"sections_id": "580",
+			"sections_avg": 93.47
+		},
+		{
+			"sections_dept": "econ",
+			"sections_id": "526",
+			"sections_avg": 93.52
+		},
+		{
+			"sections_dept": "econ",
+			"sections_id": "526",
+			"sections_avg": 93.52
+		},
+		{
+			"sections_dept": "econ",
+			"sections_id": "516",
+			"sections_avg": 95
+		},
+		{
+			"sections_dept": "econ",
+			"sections_id": "516",
+			"sections_avg": 95
+		}
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Starting with underline",
+	"input": {
+		"WHERE": {
+			"OR": [{ "GT": { "sections_avg": 97 } }, { "LT": { "sections_avg": 2 } }]
+		},
+		"OPTIONS": { "COLUMNS": ["_sections_dept", "sections_avg"] }
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

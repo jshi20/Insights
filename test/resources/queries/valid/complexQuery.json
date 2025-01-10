@@ -1,0 +1,63 @@
+{
+	"title": "complex rooms query",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"GT": {
+						"rooms_seats": 20
+					}
+				},
+				{
+					"IS": {
+						"rooms_furniture": "*Chairs*"
+					}
+				},
+				{
+					"GT": {
+						"rooms_lat": 49.2666
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["rooms_shortname", "roomCount", "avgSeats", "totalSeats"],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": ["avgSeats", "totalSeats"]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["rooms_shortname"],
+			"APPLY": [
+				{
+					"roomCount": {
+						"COUNT": "rooms_fullname"
+					}
+				},
+				{
+					"avgSeats": {
+						"AVG": "rooms_seats"
+					}
+				},
+				{
+					"totalSeats": {
+						"SUM": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "rooms_shortname": "SRC", "roomCount": 1, "avgSeats": 299, "totalSeats": 897 },
+		{ "rooms_shortname": "LASR", "roomCount": 1, "avgSeats": 80, "totalSeats": 80 },
+		{ "rooms_shortname": "IONA", "roomCount": 1, "avgSeats": 75, "totalSeats": 150 },
+		{ "rooms_shortname": "ALRD", "roomCount": 1, "avgSeats": 62.67, "totalSeats": 188 },
+		{ "rooms_shortname": "IBLC", "roomCount": 1, "avgSeats": 56.5, "totalSeats": 452 },
+		{ "rooms_shortname": "BRKX", "roomCount": 1, "avgSeats": 47, "totalSeats": 94 },
+		{ "rooms_shortname": "UCLL", "roomCount": 1, "avgSeats": 44.33, "totalSeats": 133 },
+		{ "rooms_shortname": "BUCH", "roomCount": 1, "avgSeats": 44.09, "totalSeats": 1455 },
+		{ "rooms_shortname": "ANSO", "roomCount": 1, "avgSeats": 32, "totalSeats": 96 }
+	]
+}

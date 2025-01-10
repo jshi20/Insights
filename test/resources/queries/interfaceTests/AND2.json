@@ -1,0 +1,14 @@
+{
+	"AND": [
+		{
+			"GT": {
+				"oneCourse_Pass": 3
+			}
+		},
+		{
+			"GT": {
+				"oneCourse_Avg": 92
+			}
+		}
+	]
+}

@@ -1,0 +1,61 @@
+{
+	"title": "mField test audit, year",
+	"input": {
+		"WHERE": {
+		  "AND": [
+			{
+			  "GT": {
+				"sections_audit": 3
+			  }
+			},
+			{
+			  "GT": {
+				"sections_year": 2015
+			  }
+			}
+		  ]
+		},
+		"OPTIONS": {
+		  "COLUMNS": [
+			"sections_dept",
+			"sections_id",
+			"sections_avg",
+			"sections_title",
+			"sections_uuid",
+			"sections_instructor",
+			"sections_year",
+			"sections_audit",
+			"sections_fail",
+			"sections_pass"
+		  ],
+		  "ORDER": "sections_avg"
+		}
+	  },
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept":"chem",
+			"sections_id":"406",
+			"sections_avg":73.59,
+			"sections_title":"polymer chem",
+			"sections_uuid":"31680",
+			"sections_instructor":"gates, derek",
+			"sections_year":2016,
+			"sections_audit":4,
+			"sections_fail":2,
+			"sections_pass":32
+		 },
+		 {
+			"sections_dept":"frst",
+			"sections_id":"430",
+			"sections_avg":77.36,
+			"sections_title":"adv biometrics",
+			"sections_uuid":"62523",
+			"sections_instructor":"lemay, valerie",
+			"sections_year":2016,
+			"sections_audit":5,
+			"sections_fail":0,
+			"sections_pass":39
+		 }
+	]
+}

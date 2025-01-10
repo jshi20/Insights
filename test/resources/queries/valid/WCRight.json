@@ -1,0 +1,55 @@
+{
+	"title": "SELECT dept, id, avg WHERE (avg == 95) OR (dept = adhe AND avg > 90)",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"sections_avg": 94
+							}
+						},
+						{
+							"IS": {
+								"sections_dept": "cp*"
+							}
+						}
+					]
+				},
+				{
+					"EQ": {
+						"sections_avg": 420
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_dept", "sections_id", "sections_avg"],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "cpsc",
+			"sections_id": "503",
+			"sections_avg": 94.5
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_id": "503",
+			"sections_avg": 94.5
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_id": "589",
+			"sections_avg": 95
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_id": "589",
+			"sections_avg": 95
+		}
+	]
+}

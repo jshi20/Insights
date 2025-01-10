@@ -1,0 +1,18 @@
+{
+	"title": "column key not in apply",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{ "AND": [{ "GT": { "sections_avg": 90 } }, { "IS": { "sections_dept": "adhez" } }] },
+				{ "LT": { "sections_avg": 5 } }
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_dept", "sections_id", "sections_avg", "overallSum"],
+			"ORDER": { "dir": "DOWN", "keys": ["sections_avg"] }
+		},
+		"TRANSFORMATIONS": { "GROUP": ["sections_dept", "sections_id", "sections_avg"], "APPLY": [] }
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

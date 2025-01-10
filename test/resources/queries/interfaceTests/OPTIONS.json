@@ -1,0 +1,16 @@
+{
+    
+			"COLUMNS": ["sections_dept",
+      					"sections_id",
+      					"sections_avg",
+     					"sections_title",
+      					"sections_uuid",
+      					"sections_instructor",
+      					"sections_year",
+      					"sections_audit",
+      					"sections_fail",
+      					"sections_pass"],
+			"ORDER": "sections_avg"
+		
+
+    }

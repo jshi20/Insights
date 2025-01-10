@@ -1,0 +1,27 @@
+{
+	"title": "mutple apply keys",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{ "AND": [{ "GT": { "sections_avg": 90 } }, { "IS": { "sections_dept": "adhez" } }] },
+				{ "LT": { "sections_avg": 5 } }
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_dept", "sections_id", "sections_avg", "overallAvg"],
+			"ORDER": { "dir": "DOWN", "keys": ["sections_avg"] }
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["sections_dept", "sections_id", "sections_avg"],
+			"APPLY": [{ "overallAvg": { "MIN": "sections_avg" } }]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "sections_dept": "fopr", "sections_id": "362", "sections_avg": 4.5, "overallAvg": 4.5 },
+		{ "sections_dept": "busi", "sections_id": "330", "sections_avg": 4, "overallAvg": 4 },
+		{ "sections_dept": "wood", "sections_id": "475", "sections_avg": 1, "overallAvg": 1 },
+		{ "sections_dept": "frst", "sections_id": "202", "sections_avg": 0, "overallAvg": 0 },
+		{ "sections_dept": "lfs", "sections_id": "100", "sections_avg": 0, "overallAvg": 0 }
+	]
+}

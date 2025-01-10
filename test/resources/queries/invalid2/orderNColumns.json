@@ -1,0 +1,19 @@
+{
+	"title": "Order needs a colum",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{ "GT": { "sections_avg": 70 } },
+						{ "IS": { "sections_dept": "CPSC" } }
+					]
+				},
+				{ "NOT": { "LT": { "sections_year": 2016 } } }
+			]
+		},
+		"OPTIONS": { "COLUMNS": ["sections_dept"], "ORDER": "sections_avg" }
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

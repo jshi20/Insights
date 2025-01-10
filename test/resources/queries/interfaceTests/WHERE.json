@@ -1,0 +1,25 @@
+{
+    "WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"sections_avg": 90
+							}
+						},
+						{
+							"IS": {
+								"sections_dept": "adhez"
+							}
+						}
+					]
+				},
+				{
+					"LT": {
+						"sections_avg": 4
+					}
+				}
+			]
+        }
+}

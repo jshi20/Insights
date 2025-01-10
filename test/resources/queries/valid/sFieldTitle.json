@@ -1,0 +1,119 @@
+{
+	"title": "sField test title",
+	"input": {
+		"WHERE": {
+		  "AND": [
+			{
+			  "IS": {
+				"sections_dept": "musc"
+			  }
+			},
+			{
+			  "IS": {
+				"sections_id": "131"
+			  }
+			},
+			{
+			  "IS": {
+				"sections_instructor": "price, heather"
+			  }
+			},
+			{
+			  "IS": {
+				"sections_title": "class voice"
+			  }
+			}
+		  ]
+		},
+		"OPTIONS": {
+		  "COLUMNS": [
+			"sections_dept",
+			"sections_id",
+			"sections_avg",
+			"sections_title",
+			"sections_uuid",
+			"sections_instructor",
+			"sections_year",
+			"sections_audit",
+			"sections_fail",
+			"sections_pass"
+		  ],
+		  "ORDER": "sections_avg"
+		}
+	  },
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept":"musc",
+			"sections_id":"131",
+			"sections_avg":73.94,
+			"sections_title":"class voice",
+			"sections_uuid":"151",
+			"sections_instructor":"price, heather",
+			"sections_year":2014,
+			"sections_audit":0,
+			"sections_fail":0,
+			"sections_pass":16
+		 },
+		 {
+			"sections_dept":"musc",
+			"sections_id":"131",
+			"sections_avg":76,
+			"sections_title":"class voice",
+			"sections_uuid":"77853",
+			"sections_instructor":"price, heather",
+			"sections_year":2012,
+			"sections_audit":0,
+			"sections_fail":0,
+			"sections_pass":8
+		 },
+		 {
+			"sections_dept":"musc",
+			"sections_id":"131",
+			"sections_avg":77.1,
+			"sections_title":"class voice",
+			"sections_uuid":"65846",
+			"sections_instructor":"price, heather",
+			"sections_year":2009,
+			"sections_audit":0,
+			"sections_fail":0,
+			"sections_pass":10
+		 },
+		 {
+			"sections_dept":"musc",
+			"sections_id":"131",
+			"sections_avg":79,
+			"sections_title":"class voice",
+			"sections_uuid":"93753",
+			"sections_instructor":"price, heather",
+			"sections_year":2011,
+			"sections_audit":0,
+			"sections_fail":0,
+			"sections_pass":13
+		 },
+		 {
+			"sections_dept":"musc",
+			"sections_id":"131",
+			"sections_avg":81.15,
+			"sections_title":"class voice",
+			"sections_uuid":"28683",
+			"sections_instructor":"price, heather",
+			"sections_year":2013,
+			"sections_audit":0,
+			"sections_fail":0,
+			"sections_pass":13
+		 },
+		 {
+			"sections_dept":"musc",
+			"sections_id":"131",
+			"sections_avg":87.06,
+			"sections_title":"class voice",
+			"sections_uuid":"19284",
+			"sections_instructor":"price, heather",
+			"sections_year":2010,
+			"sections_audit":0,
+			"sections_fail":0,
+			"sections_pass":17
+		 }
+	]
+}

@@ -1,0 +1,35 @@
+{
+	"title": "above 98 avg",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_avg": 98
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_title", "sections_id", "overallAvg"]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["sections_title", "sections_id"],
+			"APPLY": [
+				{
+					"overallAvg": {
+						"AVG": "sections_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "sections_title": "career planning", "sections_id": "574", "overallAvg": 99.19 },
+		{ "sections_title": "multimedia sys", "sections_id": "541", "overallAvg": 98.75 },
+		{ "sections_title": "assess lrn diffi", "sections_id": "421", "overallAvg": 98.38 },
+		{ "sections_title": "educ stds autism", "sections_id": "449", "overallAvg": 98.7 },
+		{ "sections_title": "dev el sk df&hrd", "sections_id": "519", "overallAvg": 98.45 },
+		{ "sections_title": "algb topology i", "sections_id": "527", "overallAvg": 99.78 },
+		{ "sections_title": "cl pro prim care", "sections_id": "509", "overallAvg": 98.46 },
+		{ "sections_title": "fam nrs pract", "sections_id": "578", "overallAvg": 98.54 },
+		{ "sections_title": "work int health", "sections_id": "300", "overallAvg": 98.98 }
+	]
+}

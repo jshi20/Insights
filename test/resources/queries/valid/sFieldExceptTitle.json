@@ -1,0 +1,59 @@
+{
+	"title": "sField test all except title",
+	"input": {
+		"WHERE": {
+		  "AND": [
+			{
+			  "IS": {
+				"sections_dept": "musc"
+			  }
+			},
+			{
+			  "IS": {
+				"sections_id": "131"
+			  }
+			},
+			{
+			  "IS": {
+				"sections_instructor": "price, heather"
+			  }
+			},
+			{
+			  "IS": {
+				"sections_uuid": "151"
+			  }
+			}
+		  ]
+		},
+		"OPTIONS": {
+		  "COLUMNS": [
+			"sections_dept",
+			"sections_id",
+			"sections_avg",
+			"sections_title",
+			"sections_uuid",
+			"sections_instructor",
+			"sections_year",
+			"sections_audit",
+			"sections_fail",
+			"sections_pass"
+		  ],
+		  "ORDER": "sections_avg"
+		}
+	  },
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept":"musc",
+			"sections_id":"131",
+			"sections_avg":73.94,
+			"sections_title":"class voice",
+			"sections_uuid":"151",
+			"sections_instructor":"price, heather",
+			"sections_year":2014,
+			"sections_audit":0,
+			"sections_fail":0,
+			"sections_pass":16
+		 }
+	]
+}

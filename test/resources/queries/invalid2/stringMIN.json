@@ -1,0 +1,21 @@
+{
+	"title": "trying to apply MIN to dept field which is string, illegal",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": ["sections_title", "minDept"]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["sections_title"],
+			"APPLY": [
+				{
+					"minDept": {
+						"MIN": "sections_dept"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

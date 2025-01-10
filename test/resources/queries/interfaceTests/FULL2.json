@@ -1,0 +1,40 @@
+{
+	"WHERE": {
+		"AND": [
+			{
+				"AND": [
+					{
+						"GT": {
+							"oneCourse_avg": 87
+						}
+					},
+					{
+						"IS": {
+							"oneCourse_dept": "anat"
+						}
+					}
+				]
+			},
+			{
+				"EQ": {
+					"oneCourse_avg": 89.6
+				}
+			}
+		]
+	},
+	"OPTIONS": {
+		"COLUMNS": [
+			"oneCourse_dept",
+			"oneCourse_id",
+			"oneCourse_avg",
+			"oneCourse_title",
+			"oneCourse_uuid",
+			"oneCourse_instructor",
+			"oneCourse_year",
+			"oneCourse_audit",
+			"oneCourse_fail",
+			"oneCourse_pass"
+		],
+		"ORDER": "oneCourse_avg"
+	}
+}

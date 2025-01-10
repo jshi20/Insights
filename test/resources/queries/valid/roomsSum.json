@@ -1,0 +1,39 @@
+{
+	"title": "basic rooms Sum",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"rooms_lat": 49.2666
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["rooms_shortname", "totalSeats"],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": ["totalSeats"]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["rooms_shortname"],
+			"APPLY": [
+				{
+					"totalSeats": {
+						"SUM": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "rooms_shortname": "BUCH", "totalSeats": 3190 },
+		{ "rooms_shortname": "SRC", "totalSeats": 897 },
+		{ "rooms_shortname": "IBLC", "totalSeats": 568 },
+		{ "rooms_shortname": "LASR", "totalSeats": 325 },
+		{ "rooms_shortname": "ALRD", "totalSeats": 228 },
+		{ "rooms_shortname": "ANSO", "totalSeats": 186 },
+		{ "rooms_shortname": "UCLL", "totalSeats": 163 },
+		{ "rooms_shortname": "IONA", "totalSeats": 150 },
+		{ "rooms_shortname": "BRKX", "totalSeats": 94 }
+	]
+}

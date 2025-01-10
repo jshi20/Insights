@@ -1,0 +1,17 @@
+{
+	"title": "Empty dir",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{ "AND": [{ "GT": { "sections_avg": 90 } }, { "IS": { "sections_dept": "adhez" } }] },
+				{ "LT": { "sections_avg": 4 } }
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_dept", "sections_id", "sections_avg"],
+			"ORDER": { "dir": "", "keys": ["sections_avg", "section_id"] }
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

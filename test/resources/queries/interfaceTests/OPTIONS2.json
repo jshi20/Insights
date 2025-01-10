@@ -1,0 +1,14 @@
+{
+	"COLUMNS": [
+		"oneCourse_dept",
+		"oneCourse_id",
+		"oneCourse_avg",
+		"oneCourse_title",
+		"oneCourse_uuid",
+		"oneCourse_instructor",
+		"oneCourse_year",
+		"oneCourse_audit",
+		"oneCourse_fail"
+	],
+	"ORDER": "oneCourse_fail"
+}

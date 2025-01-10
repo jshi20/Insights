@@ -1,0 +1,9 @@
+{
+	"title": "underline",
+	"input": {
+		"WHERE": { "IS": { "sections_dept": "*ac" } },
+		"OPTIONS": { "COLUMNS": ["sections_avg_"], "ORDER": "sections_avg" }
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

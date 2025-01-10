@@ -1,0 +1,40 @@
+{
+	"myData": [
+		{
+			"fullname": "Acute Care Unit",
+			"shortname": "ACU",
+			"address": "2211 Wesbrook Mall",
+			"pathToRooms": "./campus/discover/buildings-and-classrooms/ACU.htm"
+		},
+		{
+			"fullname": "Earth Sciences Building",
+			"shortname": "ESB",
+			"address": "2207 Main Mall",
+			"pathToRooms": "./campus/discover/buildings-and-classrooms/ESB.htm"
+		},
+		{
+			"fullname": "Food, Nutrition and Health",
+			"shortname": "FNH",
+			"address": "2205 East Mall",
+			"pathToRooms": "./campus/discover/buildings-and-classrooms/FNH.htm"
+		},
+		{
+			"fullname": "Hebb",
+			"shortname": "HEBB",
+			"address": "2045 East Mall",
+			"pathToRooms": "./campus/discover/buildings-and-classrooms/HEBB.htm"
+		},
+		{
+			"fullname": "Horticulture Building",
+			"shortname": "GREN",
+			"address": "6394 Stores Road",
+			"pathToRooms": "./campus/discover/buildings-and-classrooms/GREN.htm"
+		},
+		{
+			"fullname": "Woodward (Instructional Resources Centre-IRC)",
+			"shortname": "WOOD",
+			"address": "2194 Health Sciences Mall",
+			"pathToRooms": "./campus/discover/buildings-and-classrooms/WOOD.htm"
+		}
+	]
+}

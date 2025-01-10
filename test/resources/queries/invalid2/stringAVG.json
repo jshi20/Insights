@@ -1,0 +1,21 @@
+{
+	"title": "trying to apply AVG to field which is string, illegal",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": ["sections_title", "avgDept"]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["sections_title"],
+			"APPLY": [
+				{
+					"avgDept": {
+						"AVG": "sections_dept"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

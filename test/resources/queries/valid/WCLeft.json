@@ -1,0 +1,50 @@
+{
+	"title": "SELECT dept, id, avg WHERE (avg == 420) OR (dept = *he AND avg > 92)",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"sections_avg": 92
+							}
+						},
+						{
+							"IS": {
+								"sections_dept": "*he"
+							}
+						}
+					]
+				},
+				{
+					"EQ": {
+						"sections_avg": 420
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_dept", "sections_id", "sections_avg"],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "adhe",
+			"sections_id": "329",
+			"sections_avg": 92.54
+		},
+		{
+			"sections_dept": "adhe",
+			"sections_id": "329",
+			"sections_avg": 93.33
+		},
+		{
+			"sections_dept": "adhe",
+			"sections_id": "329",
+			"sections_avg": 96.11
+		}
+	]
+}

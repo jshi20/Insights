@@ -1,0 +1,20 @@
+{
+	"title": "count test",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{ "AND": [{ "GT": { "sections_avg": 10 } }, { "IS": { "sections_dept": "adhez" } }] },
+				{ "LT": { "sections_avg": 10 } }
+			]
+		},
+		"OPTIONS": { "COLUMNS": ["sections_avg", "overallCount"], "ORDER": { "dir": "DOWN", "keys": ["overallCount"] } },
+		"TRANSFORMATIONS": { "GROUP": ["sections_avg"], "APPLY": [{ "overallCount": { "COUNT": "sections_dept" } }] }
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "sections_avg": 0, "overallCount": 2 },
+		{ "sections_avg": 1, "overallCount": 1 },
+		{ "sections_avg": 4, "overallCount": 1 },
+		{ "sections_avg": 4.5, "overallCount": 1 }
+	]
+}

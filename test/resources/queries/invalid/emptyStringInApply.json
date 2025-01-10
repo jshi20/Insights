@@ -1,0 +1,21 @@
+{
+	"title": "empty string within applykeys",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{ "AND": [{ "GT": { "sections_avg": 90 } }, { "IS": { "sections_dept": "adhez" } }] },
+				{ "LT": { "sections_avg": 4 } }
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_dept", "sections_id", "sections_avg", "overallAvg"],
+			"ORDER": { "dir": "DOWN", "keys": ["sections_avg"] }
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["sections_dept", "sections_id", "sections_avg"],
+			"APPLY": [{ "overallAvg": { "COUNT": "sections_dept" } }, { "": { "COUNT": "sections_id" } }]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

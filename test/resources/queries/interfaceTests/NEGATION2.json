@@ -1,0 +1,7 @@
+{
+	"NOT": {
+		"GT": {
+			"oneCourse_Avg": 89
+		}
+	}
+}
